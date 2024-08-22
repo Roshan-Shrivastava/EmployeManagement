@@ -66,11 +66,6 @@ public class EmployeeServiceImp implements EmployeeService {
 
     @Override
     public boolean deleteEmployee(Long id) {
-
-//            EmployeEntity emp = employeeRepository.findById(id).get();
-//            employeeRepository.delete(emp);
-//            return true;
-
         Optional<EmployeEntity> empOpt = employeeRepository.findById(id);
         if (empOpt.isPresent()) {
             // If found, delete the employee
